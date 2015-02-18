@@ -2,19 +2,14 @@
       font-family: sans-serif;
       text-align: left;
   }
-.grey {
-   color:grey;
-}
-
-.black {
-    color:black;
-}
-
   .color {
       background-color: crimson;
   }
-  #wrapper > * {
-      vertical-align: middle;
+  #wrapper #add {
+      vertical-align: top;
+  }
+  #messagebox {
+      display: inline-block;
   }
   .message {
       width: 286px;
