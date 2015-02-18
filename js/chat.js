@@ -1,47 +1,36 @@
   $(document).ready(function () {
-    var counter = 0;
-    var $input = $("textarea#input");
+      var counter = 0;
+      var $input = $("textarea#input");
 
-    $("#add").click(function () {
-        if ($input.val().length == "" ) {
-        alert("Empty message? Seriously?");
-        }
-        else {
-        counter++;
-        //   alert("clicked");
+ $colorize = $(".colorize");
+              $colorize.click(function () {
+                  $(this).siblings("textarea").toggleClass("color");
+              });
 
-        $text = $input.val();
+      $("#add").click(function () {
 
-        $colorize = $("<button>")
-            .text("Colorize")
-            .append("</button>")
-            .addClass("colorize")
-            .click(function () {
-                $(this).siblings("textarea").toggleClass("color");
+          if ($input.val().length == "") {
+              alert("Empty message? Seriously?");
+          } else {
 
-            });
+              counter++;
 
-        $remove = $("<a>")
-            .attr("href", "#")
-            .text("Remove")
-            .addClass("remove")
-            .click(function () {
-                $(this).parent().toggle();
-            });
+              $text = $input.val();
 
-        $("#messages").prepend(
-            $("<div>").append($input.clone()
-            .attr("id", "newdiv" + counter)
-            .addClass("message")
-            .text($text)
-            .after("<br>")
-            .after($remove)
-            .after($colorize)
-        ).prepend("<hr>"));
+              $remove = $(".removeOff");
 
-            $input.val("");
+              $("#messages").prepend(
+                  $("#messagebox")
+                    .clone()
+                    .attr("id", "messagebox"+counter)
+                    );
 
-             }
 
-    });
-});
+
+
+              $input.val("");
+
+          }
+
+      });
+  });
