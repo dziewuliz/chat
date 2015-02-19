@@ -2,35 +2,34 @@
       var counter = 0;
       var $input = $("textarea#input");
 
- $colorize = $(".colorize");
-              $colorize.click(function () {
-                  $(this).siblings("textarea").toggleClass("color");
-              });
+      $(".colorize").click(function () {
+          $(this).prevAll("textarea").toggleClass("color");
+      });
+
+      $(".remove").click(function () {
+          var $messagebox = $(this).parent(".messagebox")
+          if ($messagebox.attr("id") !== "messagebox") {
+              $messagebox.remove();
+          }
+      });
 
       $("#add").click(function () {
+          var $text = $input.val();
 
-          if ($input.val().length == "") {
-              alert("Empty message? Seriously?");
+          if ($text == "") {
+              alert("Empty? Seriously?")
           } else {
 
               counter++;
 
-              $text = $input.val();
+              var $cloned = $("#messagebox").clone(true).attr("id", "messagebox" + counter);
+              var $eachmessagebox = $("#messagebox" + counter);
 
-              $remove = $(".removeOff");
-
-              $("#messages").prepend(
-                  $("#messagebox")
-                    .clone()
-                    .attr("id", "messagebox"+counter)
-                    );
-
-
-
-
+              $("#messages").prepend($cloned)
+              $("#messagebox" + counter).addClass("topmargin").children("textarea").text($text);
+              $("#messagebox" + counter).prepend("<hr>");
               $input.val("");
-
+              $input.removeClass("color");
           }
-
       });
   });

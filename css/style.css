@@ -4,6 +4,7 @@
   }
   .color {
       background-color: crimson;
+      color: white;
   }
   #wrapper #add {
       vertical-align: top;
@@ -24,8 +25,9 @@
       background-color: black;
       color: white;
       border: 0;
-      margin: 10px;
       padding: 5px;
+      cursor: pointer;
+      margin-top:5px;
   }
   textarea {
       width: 300px;
@@ -34,7 +36,20 @@
   a {
       text-decoration: none;
       color: black;
+      padding: 5px;
   }
   a:hover {
       color: grey;
   }
+  #messagebox a,
+  #messagebox a:hover,
+  #messagebox a:link,
+  #messagebox a:active,
+    #messagebox a:visited {
+    color: grey;
+    cursor: default;
+    }
+
+.topmargin {
+          margin-top:10px;
+}
