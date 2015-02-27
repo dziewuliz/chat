@@ -1,60 +1,52 @@
-  * {
-      font-family: sans-serif;
-  }
-  .color {
-      background-color: crimson;
-      color: white;
-  }
-
-  #wrapper #add {
-      vertical-align: top;
-      display: inline-block;
-  }
-
-  #messagebox {
-      display: inline-block;
-  }
-  .message {
-      width: 286px;
-      padding: 10px;
-  }
-
-  hr {
-      margin: 10px 0;
-      border: 1px solid black;
-      width: 304px;
-      text-align: left;
-  }
-  button {
-      background-color: black;
-      color: white;
-      border: 0;
-      padding: 5px;
-      cursor: pointer;
-      margin-top: 5px;
-      text-align: center;
-
-  }
-  textarea {
-      width: 300px;
-      height: 100px;
-  }
-  a {
-      text-decoration: none;
-      color: black;
-      padding: 5px;
-  }
-  a:hover {
-      color: grey;
-  }
-  #messagebox a,
-  #messagebox a:hover,
-  #messagebox a:link,
-  #messagebox a:active,
-  #messagebox a:visited {
-      color: grey;
-      cursor: default;
-  }
-  .topmargin {
-      margin-top: 10px;
-  }
+* {
+    font-family: sans-serif;
+}
+.color {
+    background-color: crimson;
+    color: white;
+}
+#wrapper #add {
+    vertical-align: top;
+    display: inline-block;
+}
+#messagebox {
+    display: inline-block;
+}
+hr {
+    margin: 10px 0;
+    border: 1px solid black;
+    width: 304px;
+    text-align: left;
+}
+button {
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+}
+textarea {
+    width: 300px;
+    height: 100px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+a:hover {
+    color: grey;
+}
+#messagebox a,
+#messagebox a:hover,
+#messagebox a:link,
+#messagebox a:active,
+#messagebox a:visited {
+    color: grey;
+    cursor: default;
+}
+.topmargin {
+    margin-top: 10px;
+}
