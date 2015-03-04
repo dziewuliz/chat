@@ -20,11 +20,10 @@ $(document).ready(function () {
         var $cloned = $("#messagebox").clone(true).attr("id", "messagebox" + counter);
         var $eachmessagebox = $("#messagebox" + counter);
 
-        $("#messages").prepend($cloned)
+        $("#messages").prepend($cloned);
         $("#messagebox" + counter).addClass("topmargin").children("textarea").text('');
         $("#messagebox" + counter).prepend("<hr>");
         $input.val("");
         $input.removeClass("color");
-
     });
 });

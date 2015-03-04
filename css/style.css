@@ -8,9 +8,12 @@
 #wrapper #add {
     vertical-align: top;
     display: inline-block;
+
 }
 #messagebox {
     display: inline-block;
+        *display:inline;
+    zoom:1;
 }
 hr {
     margin: 10px 0;
